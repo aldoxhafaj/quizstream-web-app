@@ -9,6 +9,8 @@
     "lint:fix": "eslint . --fix",
     "prettier:check": "prettier --check \"**/*.ts\" \"**/*.tsx\" \"**/*.js\"",
     "prettify": "prettier --write \"**/*.ts\" \"**/*.tsx\" \"**/*.js\"",
+    "ts:check": "tsc --project tsconfig.json --noEmit",
+    "prepare": "husky",
     "_____________DEFAULT____________": "echo 'You run a comment script'",
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -23,13 +25,29 @@
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
-    "eslint": "^9.25.0",
+    "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-import-resolver-typescript": "^4.4.2",
+    "eslint-plugin-functional": "^9.0.2",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-sonarjs": "^3.0.2",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.0",
     "prettier": "3.5.3",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
     "vite": "^6.3.5"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "npm run lint:fix",
+      "npm run prettify"
+    ]
   }
 }
