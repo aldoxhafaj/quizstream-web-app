@@ -2,7 +2,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@quizstream/components/*": ["./src/components/*"],
       "@quizstream/pages/*": ["./src/pages/*"],
+      "@quizstream/routes/*": ["./src/routes/*"],
+      "@quizstream/types/*": ["./src/types/*"],
       "*": ["*"]
     }
   }
