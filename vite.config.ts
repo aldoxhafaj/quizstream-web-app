@@ -22,6 +22,10 @@ export default defineConfig({
         replacement: resolve(__dirname, './src/components'),
       },
       {
+        find: '@quizstream/contexts',
+        replacement: resolve(__dirname, './src/contexts'),
+      },
+      {
         find: '@quizstream/pages',
         replacement: resolve(__dirname, './src/pages'),
       },
@@ -32,6 +36,10 @@ export default defineConfig({
       {
         find: '@quizstream/types',
         replacement: resolve(__dirname, './src/types'),
+      },
+      {
+        find: '@quizstream/utils',
+        replacement: resolve(__dirname, './src/utils'),
       },
     ],
   },

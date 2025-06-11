@@ -3,9 +3,11 @@
     "baseUrl": ".",
     "paths": {
       "@quizstream/components/*": ["./src/components/*"],
+      "@quizstream/contexts/*": ["./src/contexts/*"],
       "@quizstream/pages/*": ["./src/pages/*"],
       "@quizstream/routes/*": ["./src/routes/*"],
       "@quizstream/types/*": ["./src/types/*"],
+      "@quizstream/utils/*": ["./src/utils/*"],
       "*": ["*"]
     }
   }
