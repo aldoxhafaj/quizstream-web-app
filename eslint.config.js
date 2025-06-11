@@ -21,6 +21,22 @@ export default tseslint.config(
     files: ['**/*.{ts,tsx}'],
   },
   {
+    rules: {
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            {
+              group: ['../*'],
+              message:
+                'Relative imports are forbidden. Please start your path with @quizstream/',
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
 
     languageOptions: {

@@ -18,8 +18,20 @@ export default defineConfig({
   resolve: {
     alias: [
       {
+        find: '@quizstream/components',
+        replacement: resolve(__dirname, './src/components'),
+      },
+      {
         find: '@quizstream/pages',
         replacement: resolve(__dirname, './src/pages'),
+      },
+      {
+        find: '@quizstream/routes',
+        replacement: resolve(__dirname, './src/routes'),
+      },
+      {
+        find: '@quizstream/types',
+        replacement: resolve(__dirname, './src/types'),
       },
     ],
   },
