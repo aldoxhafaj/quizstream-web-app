@@ -1,3 +1,5 @@
+import { Text } from '@quizstream/components/layouts';
+
 export const Dashboard = () => {
-  return <p>Welcome to admin dashboard!</p>;
+  return <Text>Welcome to admin dashboard!</Text>;
 };
