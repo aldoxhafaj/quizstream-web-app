@@ -1,3 +1,5 @@
+import { Text } from '@quizstream/components/layouts';
+
 export const Login = () => {
-  return <p>Hello World!</p>;
+  return <Text>Hello world!</Text>;
 };

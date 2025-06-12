@@ -1,3 +1,5 @@
+import { Text } from '@quizstream/components/layouts';
+
 export const NotFound = () => {
-  return <p>Not Found!</p>;
+  return <Text>Not found!</Text>;
 };
