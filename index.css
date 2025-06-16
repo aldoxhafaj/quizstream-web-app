@@ -22,9 +22,11 @@
   --color-pearl: var(--color-pearl);
 
   /* Fonts */
+  --font-*: initial;
   --font-urbanist: 'Urbanist', sans-serif;
 
   /* Fontsize */
+  --text-*: initial;
   --text-h1: 48px;
   --text-h2: 40px;
   --text-h3: 32px;
@@ -37,6 +39,7 @@
   --text-small: 10px;
 
   /* Radius */
+  --radius-*: initial;
   --radius-xs: 2px;
   --radius-sm: 4px;
   --radius-sm-plus: 6px;
@@ -49,6 +52,7 @@
   --radius-xxl: 40px;
 
   /* Shadows */
+  --shadow-*: initial;
   --shadow-x1: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   --shadow-x2:
     rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -58,13 +62,40 @@
   --shadow-x5: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   --shadow-x6: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 
+  /* Spacing */
+  --spacing-*: initial;
+  --spacing-xxs: 2px;
+  --spacing-xs: 4px;
+  --spacing-s: 8px;
+  --spacing-sm: 12px;
+  --spacing-m: 16px;
+  --spacing-ml: 20px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 40px;
+  --spacing-3xl: 48px;
+  --spacing-4xl: 54px;
+  --spacing-5xl: 62px;
+  --spacing-6xl: 70px;
+
   /* Responsive breakpoints */
+  --breakpoint-*: initial;
   --breakpoint-xs: 250px;
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-xxl: 1536px;
+}
+
+/* Cusom classes should be defined like this*/
+@utility no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @layer components {
@@ -131,10 +162,52 @@
 
   @media (min-width: 250px) {
     .text-h1 {
-      font-size: calc(var(--text-h1) * 0.75) !important;
+      font-size: calc(var(--text-h1) * 0.85) !important;
     }
     .text-h2 {
       font-size: calc(var(--text-h2) * 0.85) !important;
+    }
+    .text-h3 {
+      font-size: calc(var(--text-h3) * 0.85) !important;
+    }
+    .text-h4 {
+      font-size: calc(var(--text-h4) * 0.85) !important;
+    }
+    .text-h5 {
+      font-size: calc(var(--text-h5) * 0.95) !important;
+    }
+    .text-h6 {
+      font-size: calc(var(--text-h6) * 0.95) !important;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .text-h1 {
+      font-size: calc(var(--text-h1) * 0.9) !important;
+    }
+    .text-h2 {
+      font-size: calc(var(--text-h2) * 0.9) !important;
+    }
+    .text-h3 {
+      font-size: calc(var(--text-h3) * 0.9) !important;
+    }
+    .text-h4 {
+      font-size: calc(var(--text-h4) * 0.9) !important;
+    }
+    .text-h5 {
+      font-size: calc(var(--text-h5) * 0.95) !important;
+    }
+    .text-h6 {
+      font-size: calc(var(--text-h6) * 0.95) !important;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .text-h1 {
+      font-size: calc(var(--text-h1) * 0.95) !important;
+    }
+    .text-h2 {
+      font-size: calc(var(--text-h2) * 0.95) !important;
     }
     .text-h3 {
       font-size: calc(var(--text-h3) * 0.95) !important;
@@ -148,84 +221,9 @@
     .text-h6 {
       font-size: calc(var(--text-h6) * 0.95) !important;
     }
-    .text-large {
-      font-size: calc(var(--text-large) * 0.95) !important;
-    }
-  }
-
-  @media (min-width: 640px) {
-    .text-h1 {
-      font-size: calc(var(--text-h1) * 0.85) !important;
-    }
-    .text-h2 {
-      font-size: calc(var(--text-h2) * 0.85) !important;
-    }
-    .text-h3 {
-      font-size: calc(var(--text-h3) * 1) !important;
-    }
-    .text-h4 {
-      font-size: calc(var(--text-h4) * 1) !important;
-    }
-    .text-h5 {
-      font-size: calc(var(--text-h5) * 0.95) !important;
-    }
-    .text-h6 {
-      font-size: calc(var(--text-h6) * 0.95) !important;
-    }
-    .text-large {
-      font-size: calc(var(--text-large) * 0.95) !important;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .text-h1 {
-      font-size: calc(var(--text-h1) * 0.9) !important;
-    }
-    .text-h2 {
-      font-size: calc(var(--text-h2) * 0.9) !important;
-    }
-    .text-h3 {
-      font-size: calc(var(--text-h3) * 1) !important;
-    }
-    .text-h4 {
-      font-size: calc(var(--text-h4) * 1) !important;
-    }
-    .text-h5 {
-      font-size: calc(var(--text-h5) * 0.9) !important;
-    }
-    .text-h6 {
-      font-size: calc(var(--text-h6) * 0.95) !important;
-    }
-    .text-large {
-      font-size: calc(var(--text-large) * 0.95) !important;
-    }
   }
 
   @media (min-width: 1024px) {
-    .text-h1 {
-      font-size: calc(var(--text-h1) * 0.95) !important;
-    }
-    .text-h2 {
-      font-size: calc(var(--text-h2) * 0.95) !important;
-    }
-    .text-h3 {
-      font-size: calc(var(--text-h3) * 1) !important;
-    }
-    .text-h4 {
-      font-size: calc(var(--text-h4) * 1) !important;
-    }
-    .text-h5 {
-      font-size: calc(var(--text-h5) * 0.95) !important;
-    }
-    .text-h6 {
-      font-size: calc(var(--text-h6) * 1) !important;
-    }
-    .text-large {
-      font-size: calc(var(--text-large) * 1) !important;
-    }
-  }
-
-  @media (min-width: 1280px) {
     .text-h1 {
       font-size: calc(var(--text-h1) * 1) !important;
     }
@@ -244,12 +242,9 @@
     .text-h6 {
       font-size: calc(var(--text-h6) * 1) !important;
     }
-    .text-large {
-      font-size: calc(var(--text-large) * 1) !important;
-    }
   }
 
-  @media (min-width: 1536px) {
+  @media (min-width: 1280px) {
     .text-h1 {
       font-size: calc(var(--text-h1) * 1.1) !important;
     }
@@ -270,6 +265,30 @@
     }
     .text-large {
       font-size: calc(var(--text-large) * 1.1) !important;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .text-h1 {
+      font-size: calc(var(--text-h1) * 1.2) !important;
+    }
+    .text-h2 {
+      font-size: calc(var(--text-h2) * 1.2) !important;
+    }
+    .text-h3 {
+      font-size: calc(var(--text-h3) * 1.2) !important;
+    }
+    .text-h4 {
+      font-size: calc(var(--text-h4) * 1.2) !important;
+    }
+    .text-h5 {
+      font-size: calc(var(--text-h5) * 1.2) !important;
+    }
+    .text-h6 {
+      font-size: calc(var(--text-h6) * 1.2) !important;
+    }
+    .text-large {
+      font-size: calc(var(--text-large) * 1.2) !important;
     }
   }
 }
