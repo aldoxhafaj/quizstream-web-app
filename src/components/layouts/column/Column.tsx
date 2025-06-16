@@ -12,7 +12,7 @@ export const Column = ({
   const isClickable = !!onClick;
   return (
     <div
-      className={`flex flex-row ${FlexAlign[alignItems]} ${FlexJustify[justifyContent]} ${isClickable && 'cursor-pointer'} ${classname}`}
+      className={`flex flex-col ${FlexAlign[alignItems]} ${FlexJustify[justifyContent]} ${isClickable && 'cursor-pointer'} ${classname}`}
       onClick={onClick}
     >
       {children}
