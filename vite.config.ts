@@ -26,6 +26,10 @@ export default defineConfig({
         replacement: resolve(__dirname, './src/contexts'),
       },
       {
+        find: '@quizstream/i18n',
+        replacement: resolve(__dirname, './src/i18n'),
+      },
+      {
         find: '@quizstream/pages',
         replacement: resolve(__dirname, './src/pages'),
       },

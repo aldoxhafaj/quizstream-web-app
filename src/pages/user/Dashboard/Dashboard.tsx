@@ -1,5 +1,15 @@
 import { Text } from '@quizstream/components/layouts';
+import { useIntl } from '@quizstream/contexts/i18nContext';
 
 export const Dashboard = () => {
-  return <Text>Welcome to user dashboard!</Text>;
+  const { formatMessage } = useIntl();
+
+  return (
+    <Text>
+      {formatMessage({
+        id: 'userDashboard.title',
+        defaultMessage: 'Welcome to user dashboard!',
+      })}
+    </Text>
+  );
 };

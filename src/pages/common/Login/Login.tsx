@@ -1,5 +1,12 @@
 import { Text } from '@quizstream/components/layouts';
+import { useIntl } from '@quizstream/contexts/i18nContext';
 
 export const Login = () => {
-  return <Text>Hello world!</Text>;
+  const { formatMessage } = useIntl();
+
+  return (
+    <Text>
+      {formatMessage({ id: 'login.title', defaultMessage: 'Hello world!' })}
+    </Text>
+  );
 };
