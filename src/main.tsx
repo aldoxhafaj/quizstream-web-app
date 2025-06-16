@@ -1,3 +1,4 @@
+import { IntlProvider } from '@quizstream/contexts/i18nContext';
 import { ThemeProvider } from '@quizstream/contexts/themeContext';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
@@ -9,9 +10,11 @@ import { App } from './App.tsx';
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
+      <IntlProvider>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </IntlProvider>
     </BrowserRouter>
   </StrictMode>,
 );

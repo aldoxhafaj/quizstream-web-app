@@ -1,6 +1,7 @@
 import js from '@eslint/js';
 import { globalIgnores } from 'eslint/config';
 import eslintConfigPrettier from 'eslint-config-prettier';
+import eslintPluginFormatjs from 'eslint-plugin-formatjs';
 import eslintPluginFunctional from 'eslint-plugin-functional';
 import eslintPluginImport from 'eslint-plugin-import';
 import eslintPluginReact from 'eslint-plugin-react';
@@ -15,7 +16,13 @@ import tseslint from 'typescript-eslint';
 
 // eslint-disable-next-line import/no-default-export
 export default tseslint.config(
-  globalIgnores(['node_modules', 'dist', 'build']),
+  globalIgnores([
+    'node_modules',
+    'dist',
+    'build',
+    'i18nformatter.cjs',
+    'i18ncompile.cjs',
+  ]),
   {
     ignores: ['dist', '**/README.md'],
     files: ['**/*.{ts,tsx}'],
@@ -187,6 +194,43 @@ export default tseslint.config(
       'sonarjs/non-existent-operator': 'error',
       'sonarjs/prefer-object-literal': 'error',
       'sonarjs/prefer-single-boolean-return': 'error',
+    },
+  },
+  {
+    plugins: {
+      formatjs: eslintPluginFormatjs,
+    },
+    rules: {
+      'formatjs/no-offset': 'error',
+      'formatjs/enforce-default-message': ['error', 'literal'],
+      'formatjs/no-missing-icu-plural-one-placeholders': 'error',
+      'formatjs/no-emoji': ['error', { versionAbove: '12.0' }],
+      'formatjs/enforce-plural-rules': [
+        2,
+        {
+          one: true,
+          other: true,
+          zero: false,
+        },
+      ],
+      'formatjs/no-literal-string-in-object': [
+        'error',
+        {
+          // The object properties to check for untranslated literal strings
+          include: ['label', 'title'],
+        },
+      ],
+      'formatjs/no-multiple-whitespaces': 'error',
+      'formatjs/no-multiple-plurals': 'error',
+      'formatjs/enforce-id': 'error',
+      'formatjs/no-invalid-icu': 'error',
+      'formatjs/no-complex-selectors': [
+        'error',
+        {
+          limit: 3,
+        },
+      ],
+      'formatjs/prefer-pound-in-plural': 'error',
     },
   },
 );
