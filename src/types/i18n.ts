@@ -1,4 +1,4 @@
 export enum Language {
   EN = 'en',
-  SQAL = 'sqal',
+  SQ_AL = 'sq-AL',
 }

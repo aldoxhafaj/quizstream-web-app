@@ -1,3 +1,15 @@
+import '@formatjs/intl-getcanonicallocales/polyfill';
+import '@formatjs/intl-locale/polyfill';
+import '@formatjs/intl-pluralrules/polyfill';
+import '@formatjs/intl-pluralrules/locale-data/en';
+import '@formatjs/intl-pluralrules/locale-data/sq';
+import '@formatjs/intl-numberformat/polyfill-force';
+import '@formatjs/intl-numberformat/locale-data/en';
+import '@formatjs/intl-numberformat/locale-data/sq';
+import '@formatjs/intl-datetimeformat/polyfill-force';
+import '@formatjs/intl-datetimeformat/locale-data/en';
+import '@formatjs/intl-datetimeformat/locale-data/sq';
+
 import { IntlProvider } from '@quizstream/contexts/i18nContext';
 import { ThemeProvider } from '@quizstream/contexts/themeContext';
 import { StrictMode } from 'react';
