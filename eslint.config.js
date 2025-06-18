@@ -35,6 +35,14 @@ export default tseslint.config(
         {
           patterns: [
             {
+              group: ['@heroui/*', '!@heroui/theme', '!@heroui/system'],
+              message: 'Please import components from @quizstream/components.',
+            },
+            {
+              group: ['node_modules/*'],
+              message: 'This import must be wrong. Please fix it.',
+            },
+            {
               group: ['../*'],
               message:
                 'Relative imports are forbidden. Please start your path with @quizstream/',

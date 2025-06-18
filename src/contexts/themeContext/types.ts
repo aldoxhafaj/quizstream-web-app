@@ -1,5 +1,5 @@
 import type { Theme } from '@quizstream/types/theme';
-import type { ReactNode } from 'node_modules/@types/react';
+import type { ReactNode } from 'react';
 
 export type ThemeContextProps = {
   isDarkMode: boolean;
