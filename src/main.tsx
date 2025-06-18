@@ -10,6 +10,7 @@ import '@formatjs/intl-datetimeformat/polyfill-force';
 import '@formatjs/intl-datetimeformat/locale-data/en';
 import '@formatjs/intl-datetimeformat/locale-data/sq';
 
+import { HeroUIProvider } from '@heroui/system';
 import { IntlProvider } from '@quizstream/contexts/i18nContext';
 import { ThemeProvider } from '@quizstream/contexts/themeContext';
 import { StrictMode } from 'react';
@@ -24,7 +25,9 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <IntlProvider>
         <ThemeProvider>
-          <App />
+          <HeroUIProvider>
+            <App />
+          </HeroUIProvider>
         </ThemeProvider>
       </IntlProvider>
     </BrowserRouter>

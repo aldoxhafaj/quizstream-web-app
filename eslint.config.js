@@ -22,6 +22,7 @@ export default tseslint.config(
     'build',
     'i18nformatter.cjs',
     'i18ncompile.cjs',
+    'hero.ts',
   ]),
   {
     ignores: ['dist', '**/README.md'],

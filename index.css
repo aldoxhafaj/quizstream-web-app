@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
+@plugin './hero.ts';
+
+@source './node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -26,7 +29,6 @@
   --font-urbanist: 'Urbanist', sans-serif;
 
   /* Fontsize */
-  --text-*: initial;
   --text-h1: 48px;
   --text-h2: 40px;
   --text-h3: 32px;
@@ -36,10 +38,9 @@
   --text-large: 16px;
   --text-body: 14px;
   --text-caption: 12px;
-  --text-small: 10px;
+  --text-overline: 10px;
 
   /* Radius */
-  --radius-*: initial;
   --radius-xs: 2px;
   --radius-sm: 4px;
   --radius-sm-plus: 6px;
@@ -52,7 +53,6 @@
   --radius-xxl: 40px;
 
   /* Shadows */
-  --shadow-*: initial;
   --shadow-x1: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   --shadow-x2:
     rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -63,7 +63,6 @@
   --shadow-x6: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 
   /* Spacing */
-  --spacing-*: initial;
   --spacing-xxs: 2px;
   --spacing-xs: 4px;
   --spacing-s: 8px;
@@ -79,7 +78,6 @@
   --spacing-6xl: 70px;
 
   /* Responsive breakpoints */
-  --breakpoint-*: initial;
   --breakpoint-xs: 250px;
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
@@ -99,10 +97,6 @@
 }
 
 @layer components {
-  body {
-    font-family: var(--font-urbanist);
-  }
-
   .text-h1 {
     font-size: var(--text-h1);
     font-weight: bold;

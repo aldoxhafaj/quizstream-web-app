@@ -9,7 +9,7 @@ export const Text = ({
   const isClickable = !!onClick;
   return (
     <p
-      className={`${Fontsize[size]} ${isClickable && 'cursor-pointer transition-all select-none hover:opacity-90 active:opacity-75'} ${classname}`}
+      className={`font-urbanist ${Fontsize[size]} ${isClickable && 'cursor-pointer transition-all select-none hover:opacity-90 active:opacity-75'} ${classname}`}
       onClick={onClick}
     >
       {children}
