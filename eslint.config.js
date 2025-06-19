@@ -9,12 +9,12 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import eslintPluginSimpleImportSort from 'eslint-plugin-simple-import-sort';
 import eslintPluginSonarjs from 'eslint-plugin-sonarjs';
+import eslintPluginStorybook from 'eslint-plugin-storybook';
 import eslintPluginUnusedImports from 'eslint-plugin-unused-imports';
 import globals from 'globals';
 import { version } from 'react';
 import tseslint from 'typescript-eslint';
 
-// eslint-disable-next-line import/no-default-export
 export default tseslint.config(
   globalIgnores([
     'node_modules',
@@ -23,6 +23,7 @@ export default tseslint.config(
     'i18nformatter.cjs',
     'i18ncompile.cjs',
     'hero.ts',
+    '.storybook',
   ]),
   {
     ignores: ['dist', '**/README.md'],
@@ -240,6 +241,14 @@ export default tseslint.config(
         },
       ],
       'formatjs/prefer-pound-in-plural': 'error',
+    },
+  },
+  eslintPluginStorybook.configs['flat/recommended'],
+  {
+    files: ['vite.config.ts', 'eslint.config.js', '**/*.stories.{ts,tsx}'],
+    rules: {
+      'import/no-default-export': 'off',
+      'formatjs/no-literal-string-in-object': 'off',
     },
   },
 );
