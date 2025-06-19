@@ -14,6 +14,9 @@
     "_____________I18N_______________": "echo 'You run a comment script'",
     "messages:extract": "cmd /c \"src\\utils\\scripts\\i18n-extract.bat\"",
     "messages:compile": "cmd /c \"src\\utils\\scripts\\i18n-compile.bat\"",
+    "___________STORYBOOK____________": "echo 'You run a comment script'",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "_____________DEFAULT____________": "echo 'You run a comment script'",
     "start": "vite",
     "build": "tsc -b && vite build",
@@ -39,8 +42,14 @@
     "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^4.0.0",
     "@eslint/js": "^9.25.0",
     "@formatjs/cli": "^6.7.2",
+    "@storybook/addon-a11y": "^9.0.12",
+    "@storybook/addon-docs": "^9.0.12",
+    "@storybook/addon-onboarding": "^9.0.12",
+    "@storybook/addon-vitest": "^9.0.12",
+    "@storybook/react-vite": "^9.0.12",
     "@types/node": "^24.0.0",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
@@ -57,15 +66,21 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-sonarjs": "^3.0.2",
+    "eslint-plugin-storybook": "^9.0.12",
     "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.0",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.12",
+    "storybook": "^9.0.12",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "vitest": "^3.2.4",
+    "@vitest/browser": "^3.2.4",
+    "playwright": "^1.53.1",
+    "@vitest/coverage-v8": "^3.2.4"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
