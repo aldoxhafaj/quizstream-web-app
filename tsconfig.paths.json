@@ -2,11 +2,13 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@quizstream/assets/*": ["./src/assets/*"],
       "@quizstream/components/*": ["./src/components/*"],
       "@quizstream/contexts/*": ["./src/contexts/*"],
       "@quizstream/i18n/*": ["./src/i18n/*"],
       "@quizstream/pages/*": ["./src/pages/*"],
       "@quizstream/routes/*": ["./src/routes/*"],
+      "@quizstream/themes/*": ["./src/themes/*"],
       "@quizstream/types/*": ["./src/types/*"],
       "@quizstream/utils/*": ["./src/utils/*"],
       "*": ["*"]

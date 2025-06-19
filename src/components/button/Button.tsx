@@ -7,7 +7,7 @@ export const Button = ({
   children,
   className,
   variant = 'solid',
-  color = 'default',
+  color = 'primary',
   size = 'md',
   radius,
   startContent,

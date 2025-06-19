@@ -17,6 +17,10 @@ export default defineConfig({
   resolve: {
     alias: [
       {
+        find: '@quizstream/assets',
+        replacement: resolve(__dirname, './src/assets'),
+      },
+      {
         find: '@quizstream/components',
         replacement: resolve(__dirname, './src/components'),
       },
@@ -35,6 +39,10 @@ export default defineConfig({
       {
         find: '@quizstream/routes',
         replacement: resolve(__dirname, './src/routes'),
+      },
+      {
+        find: '@quizstream/themes',
+        replacement: resolve(__dirname, './src/themes'),
       },
       {
         find: '@quizstream/types',
