@@ -3,30 +3,33 @@ import { Column, Text } from '@quizstream/components/layouts';
 import { LottieView } from '@quizstream/components/lottieView';
 import { useIntl } from '@quizstream/contexts/i18nContext';
 import { Animation } from '@quizstream/themes/animations';
+import { horizontalScale } from '@quizstream/utils/calculations';
 import type { FallbackProps } from 'react-error-boundary';
 
+const LOTTIE_SIZE = horizontalScale(450);
 export const ErrorFallback = ({ resetErrorBoundary }: FallbackProps) => {
   const { formatMessage } = useIntl();
 
   return (
     <Column
-      classname="min-w-dvw min-h-dvh bg-background overflow-y-auto p-3xl max-md:p-xl"
+      classname="w-dvw min-h-dvh bg-background p-3xl max-md:p-xl"
       alignItems="center"
+      justifyContent="center"
     >
       <LottieView
         name={Animation.SOMETHING_WENT_WRONG}
-        width={450}
-        height={450}
+        width={LOTTIE_SIZE}
+        height={LOTTIE_SIZE}
         loop
       />
       <Column classname="mb-15 gap-4" alignItems="center">
-        <Text classname="text-center" size="h2">
+        <Text classname="text-center" size="h4">
           {formatMessage({
             id: 'errorFallback.title',
             defaultMessage: 'Whoops! Something, went wrong!',
           })}
         </Text>
-        <Text classname="text-center" size="h6">
+        <Text classname="text-center text-steel!" size="h6">
           {formatMessage({
             id: 'errorFallback.description',
             defaultMessage:

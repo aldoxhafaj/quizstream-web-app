@@ -10,12 +10,14 @@
   --color-background: rgb(245 247 251);
   --color-base: black;
   --color-pearl: white;
+  --color-steel: #757575;
 }
 
 .dark {
   --color-background: rgb(22 22 22);
   --color-base: white;
   --color-pearl: rgb(29 29 31);
+  --color-steel: white;
 }
 
 @theme {
@@ -23,6 +25,7 @@
   --color-background: var(--color-background);
   --color-base: var(--color-base);
   --color-pearl: var(--color-pearl);
+  --color-steel: var(--color-steel);
 
   /* Fonts */
   --font-*: initial;
