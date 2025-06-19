@@ -13,11 +13,20 @@ import '@formatjs/intl-datetimeformat/locale-data/sq';
 import { HeroUIProvider } from '@heroui/system';
 import { IntlProvider } from '@quizstream/contexts/i18nContext';
 import { ThemeProvider } from '@quizstream/contexts/themeContext';
+import { ErrorFallback } from '@quizstream/pages/common';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { ErrorBoundary, type FallbackProps } from 'react-error-boundary';
 import { BrowserRouter } from 'react-router';
 
 import { App } from './App.tsx';
+
+const renderFallbackComponent = ({
+  error,
+  resetErrorBoundary,
+}: FallbackProps) => (
+  <ErrorFallback error={error} resetErrorBoundary={resetErrorBoundary} />
+);
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 createRoot(document.getElementById('root')!).render(
@@ -25,9 +34,11 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <IntlProvider>
         <ThemeProvider>
-          <HeroUIProvider>
-            <App />
-          </HeroUIProvider>
+          <ErrorBoundary FallbackComponent={renderFallbackComponent}>
+            <HeroUIProvider>
+              <App />
+            </HeroUIProvider>
+          </ErrorBoundary>
         </ThemeProvider>
       </IntlProvider>
     </BrowserRouter>
