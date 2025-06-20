@@ -28,5 +28,6 @@ export type InputProps = Pick<
   | 'fullWidth'
   | 'onValueChange'
   | 'onChange'
+  | 'onBlur'
   | 'onClear'
 >;

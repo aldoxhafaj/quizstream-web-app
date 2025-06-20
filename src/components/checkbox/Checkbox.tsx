@@ -8,7 +8,6 @@ export const Checkbox = ({
   classNames,
   icon,
   value,
-  name,
   size = 'md',
   color = 'primary',
   radius,
@@ -20,6 +19,7 @@ export const Checkbox = ({
   isDisabled = false,
   isIndeterminate = false,
   isInvalid = false,
+  onBlur,
   onValueChange,
 }: CheckboxProps) => {
   return (
@@ -27,7 +27,6 @@ export const Checkbox = ({
       classNames={classNames}
       icon={icon}
       value={value}
-      name={name}
       size={size}
       color={color}
       radius={radius}
@@ -39,6 +38,7 @@ export const Checkbox = ({
       isDisabled={isDisabled}
       isIndeterminate={isIndeterminate}
       isInvalid={isInvalid}
+      onBlur={onBlur}
       onValueChange={onValueChange}
     >
       {children}

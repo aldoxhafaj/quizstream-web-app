@@ -1,20 +1,22 @@
-// eslint-disable-next-line no-restricted-imports
-import { Input as HeroUIInput } from '@heroui/input';
+import { Input } from '@quizstream/components/input';
+import { useController, useFormContext } from 'react-hook-form';
 
-import type { InputProps } from './types';
+import type { InputFieldProps } from './types';
 
-export const Input = ({
+/** This field is only available through formWrapper.
+ *  Otherwise use input.
+ */
+
+export const InputField = ({
   classNames,
+  name,
   variant = 'flat',
   color = 'default',
   size = 'md',
   radius,
   label,
-  value,
-  defaultValue,
   placeholder,
   description,
-  errorMessage,
   minLength,
   maxLength,
   type = 'text',
@@ -23,28 +25,30 @@ export const Input = ({
   labelPlacement = 'inside',
   isClearable = false,
   isRequired = false,
-  isReadOnly = false,
-  isDisabled = false,
-  isInvalid = false,
   fullWidth = false,
   onClear,
-  onBlur,
-  onChange,
-  onValueChange,
-}: InputProps) => {
+}: InputFieldProps) => {
+  const { control } = useFormContext();
+  const {
+    field: { onBlur, onChange, value },
+    formState: { errors, isValid },
+  } = useController({ name, control });
+
   return (
-    <HeroUIInput
+    <Input
+      value={value}
+      errorMessage={errors.root?.message}
+      isInvalid={!isValid}
+      onBlur={onBlur}
+      onChange={onChange}
       classNames={classNames}
       variant={variant}
       color={color}
       size={size}
       radius={radius}
       label={label}
-      value={value}
-      defaultValue={defaultValue}
       placeholder={placeholder}
       description={description}
-      errorMessage={errorMessage}
       minLength={minLength}
       maxLength={maxLength}
       type={type}
@@ -53,14 +57,8 @@ export const Input = ({
       labelPlacement={labelPlacement}
       isClearable={isClearable}
       isRequired={isRequired}
-      isReadOnly={isReadOnly}
-      isDisabled={isDisabled}
-      isInvalid={isInvalid}
       fullWidth={fullWidth}
       onClear={onClear}
-      onBlur={onBlur}
-      onChange={onChange}
-      onValueChange={onValueChange}
     />
   );
 };
