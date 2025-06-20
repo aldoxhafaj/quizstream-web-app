@@ -4,14 +4,14 @@ import type { FooterProps } from './types';
 
 export const Footer = ({
   children,
-  classname,
+  className,
   alignitems = 'center',
   onClick,
 }: FooterProps) => {
   const isClickable = !!onClick;
   return (
     <div
-      className={`flex grow justify-end ${FlexAlign[alignitems]} ${isClickable && 'cursor-pointer'} ${classname}`}
+      className={`flex grow justify-end ${FlexAlign[alignitems]} ${isClickable && 'cursor-pointer'} ${className}`}
       onClick={onClick}
     >
       {children}

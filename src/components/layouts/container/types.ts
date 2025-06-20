@@ -14,7 +14,7 @@ type Overflow = keyof typeof OverflowBehaviour;
 
 export type ContainerProps = {
   children: ReactNode;
-  classname?: string;
+  className?: string;
   overflow?: Overflow;
   disableScrollbar?: boolean;
   onClick?: MouseEventHandler<HTMLDivElement>;

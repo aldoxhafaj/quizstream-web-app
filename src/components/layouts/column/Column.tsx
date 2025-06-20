@@ -4,7 +4,7 @@ import type { ColumnProps } from './types';
 
 export const Column = ({
   children,
-  classname,
+  className,
   alignItems = 'start',
   justifyContent = 'start',
   onClick,
@@ -12,7 +12,7 @@ export const Column = ({
   const isClickable = !!onClick;
   return (
     <div
-      className={`flex flex-col ${FlexAlign[alignItems]} ${FlexJustify[justifyContent]} ${isClickable && 'cursor-pointer'} ${classname}`}
+      className={`flex flex-col ${FlexAlign[alignItems]} ${FlexJustify[justifyContent]} ${isClickable && 'cursor-pointer'} ${className}`}
       onClick={onClick}
     >
       {children}

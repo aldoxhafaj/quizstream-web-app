@@ -8,7 +8,7 @@ import { useState } from 'react';
 import type { LottieViewProps } from './types';
 
 export const LottieView = ({
-  containerClassname,
+  containerClassName,
   name,
   width,
   height,
@@ -19,8 +19,8 @@ export const LottieView = ({
   const [isLoading, setIsLoading] = useState(enableLoading);
 
   return (
-    <Container classname={containerClassname}>
-      <Container classname="relative">
+    <Container className={containerClassName}>
+      <Container className="relative">
         {isLoading && (
           <div className="absolute inset-0" style={{ width, height }}>
             <ContentLoader type={ContentLoaderType.LOTTIE_ANIMATION} />
