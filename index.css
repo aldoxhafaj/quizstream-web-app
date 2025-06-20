@@ -7,14 +7,14 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 .light {
-  --color-background: rgb(245 247 251);
+  --color-background: #eeedf4;
   --color-base: black;
   --color-pearl: white;
   --color-steel: #757575;
 }
 
 .dark {
-  --color-background: rgb(22 22 22);
+  --color-background: #18171e;
   --color-base: white;
   --color-pearl: rgb(29 29 31);
   --color-steel: white;
