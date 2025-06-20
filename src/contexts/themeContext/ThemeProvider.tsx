@@ -1,3 +1,4 @@
+import { DarkColors, LightColors } from '@quizstream/themes/colors';
 import { StorageKey } from '@quizstream/types/storage';
 import { Theme } from '@quizstream/types/theme';
 import { getThemeMode } from '@quizstream/utils/configurations';
@@ -55,8 +56,9 @@ const ThemeProvider = ({ children }: ThemeProviderProps) => {
   );
 
   const isDarkMode = appTheme === Theme.DARK;
+  const colors = isDarkMode ? DarkColors : LightColors;
   return (
-    <ThemeContext.Provider value={{ isDarkMode }}>
+    <ThemeContext.Provider value={{ isDarkMode, colors }}>
       <ThemeTogglerContext.Provider value={themeTogglerValues}>
         <div className={isDarkMode ? Theme.DARK : Theme.LIGHT}>{children}</div>
       </ThemeTogglerContext.Provider>

@@ -7,4 +7,5 @@ export type LottieViewProps = {
   containerClassname?: string;
   autoplay?: boolean;
   loop?: boolean;
+  enableLoading?: boolean;
 };

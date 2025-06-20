@@ -9,15 +9,17 @@
 .light {
   --color-background: #eeedf4;
   --color-base: black;
-  --color-pearl: white;
   --color-steel: #757575;
+  --color-charcoal: #e1dfdf;
+  --color-dusk: #f3f0f0;
 }
 
 .dark {
   --color-background: #18171e;
   --color-base: white;
-  --color-pearl: rgb(29 29 31);
   --color-steel: white;
+  --color-charcoal: #23262f;
+  --color-dusk: #35383f;
 }
 
 @theme {
@@ -26,6 +28,8 @@
   --color-base: var(--color-base);
   --color-pearl: var(--color-pearl);
   --color-steel: var(--color-steel);
+  --color-charcoal: var(--color-charcoal);
+  --color-dusk: var(--color-dusk);
 
   /* Fonts */
   --font-*: initial;
