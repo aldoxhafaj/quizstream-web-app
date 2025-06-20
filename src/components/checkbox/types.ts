@@ -7,7 +7,6 @@ export type CheckboxProps = Pick<
   | 'classNames'
   | 'icon'
   | 'value'
-  | 'name'
   | 'size'
   | 'color'
   | 'radius'
@@ -19,5 +18,6 @@ export type CheckboxProps = Pick<
   | 'isDisabled'
   | 'isIndeterminate'
   | 'isInvalid'
+  | 'onBlur'
   | 'onValueChange'
 >;
