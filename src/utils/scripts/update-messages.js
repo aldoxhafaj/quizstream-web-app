@@ -20,11 +20,11 @@ const messagesEnUpdated = { ...messagesEn };
 const messagesAlUpdated = { ...messagesAl };
 
 Object.entries(allMessages).forEach(([key, value]) => {
-  if (!messagesEnUpdated[key]) {
+  if (!messagesEnUpdated[key] || messagesEnUpdated[key] !== value) {
     messagesEnUpdated[key] = value;
   }
 
-  if (!messagesAlUpdated[key]) {
+  if (!messagesAlUpdated[key] || messagesAlUpdated[key] !== value) {
     messagesAlUpdated[key] = value;
   }
 });

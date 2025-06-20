@@ -9,8 +9,12 @@ export const SecureRoute = ({
   children,
   authorizedRoles = [],
 }: SecureRouteProps) => {
-  if (!LOGGED_USER_ROLE || !authorizedRoles.includes(LOGGED_USER_ROLE)) {
+  if (!LOGGED_USER_ROLE) {
     return <Navigate to="/" replace />;
+  }
+
+  if (!authorizedRoles.includes(LOGGED_USER_ROLE)) {
+    return <Navigate to="/notFound" />;
   }
 
   return children;

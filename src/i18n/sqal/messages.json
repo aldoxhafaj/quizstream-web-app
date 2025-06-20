@@ -1,6 +1,11 @@
 {
   "adminDashboard.title": "Welcome to admin dashboard!",
   "login.title": "Hello world!",
-  "notFound.title": "Not found!",
-  "userDashboard.title": "Welcome to user dashboard!"
+  "notFound.title": "Whoops! Page not found.",
+  "userDashboard.title": "Welcome to user dashboard!",
+  "errorFallback.button.label": "Try again!",
+  "errorFallback.subtitle": "We're sorry, but an unexpected error occurred. Our team is working to resolve the issue. Please try refreshing the page or check back later.",
+  "errorFallback.title": "Whoops! Something, went wrong!",
+  "notFound.button.label": "Back to home",
+  "notFound.subtitle": "We couldn't find the page you are looking for.It might have been moved or doesn't exist anymore."
 }
