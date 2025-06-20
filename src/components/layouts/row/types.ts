@@ -6,7 +6,7 @@ import type { MouseEventHandler, ReactNode } from 'react';
 
 export type RowProps = {
   children: ReactNode;
-  classname?: string;
+  className?: string;
   alignItems?: AlignItems;
   justifyContent?: JustifyContent;
   flexWrap?: boolean;

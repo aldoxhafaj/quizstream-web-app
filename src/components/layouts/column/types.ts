@@ -6,7 +6,7 @@ import type { MouseEventHandler, ReactNode } from 'react';
 
 export type ColumnProps = {
   children: ReactNode;
-  classname?: string;
+  className?: string;
   alignItems?: AlignItems;
   justifyContent?: JustifyContent;
   onClick?: MouseEventHandler<HTMLDivElement>;

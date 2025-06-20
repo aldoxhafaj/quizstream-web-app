@@ -3,7 +3,7 @@ import type { MouseEventHandler, ReactNode } from 'react';
 
 export type FooterProps = {
   children: ReactNode;
-  classname?: string;
+  className?: string;
   alignitems?: AlignItems;
   onClick?: MouseEventHandler<HTMLDivElement>;
 };

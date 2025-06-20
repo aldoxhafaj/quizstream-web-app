@@ -17,7 +17,7 @@ export type TextSize = keyof typeof Fontsize;
 
 export type TextProps = {
   children: ReactNode;
-  classname?: string;
+  className?: string;
   size?: TextSize;
   onClick?: MouseEventHandler<HTMLParagraphElement>;
 };

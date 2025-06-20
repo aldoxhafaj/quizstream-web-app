@@ -2,7 +2,7 @@ import { type ContainerProps, OverflowBehaviour } from './types';
 
 export const Container = ({
   children,
-  classname,
+  className,
   overflow = 'visible',
   disableScrollbar = false,
   onClick,
@@ -10,7 +10,7 @@ export const Container = ({
   const isClickable = !!onClick;
   return (
     <div
-      className={`${OverflowBehaviour[overflow]} ${disableScrollbar && 'no-scrollbar'} ${isClickable && 'cursor-pointer'} ${classname}`}
+      className={`${OverflowBehaviour[overflow]} ${disableScrollbar && 'no-scrollbar'} ${isClickable && 'cursor-pointer'} ${className}`}
       onClick={onClick}
     >
       {children}

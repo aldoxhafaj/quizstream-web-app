@@ -4,7 +4,7 @@ import type { RowProps } from './types';
 
 export const Row = ({
   children,
-  classname,
+  className,
   alignItems = 'start',
   justifyContent = 'start',
   flexWrap = false,
@@ -13,7 +13,7 @@ export const Row = ({
   const isClickable = !!onClick;
   return (
     <div
-      className={`flex flex-row ${FlexAlign[alignItems]} ${FlexJustify[justifyContent]} ${flexWrap && 'flex-wrap'} ${isClickable && 'cursor-pointer'} ${classname}`}
+      className={`flex flex-row ${FlexAlign[alignItems]} ${FlexJustify[justifyContent]} ${flexWrap && 'flex-wrap'} ${isClickable && 'cursor-pointer'} ${className}`}
       onClick={onClick}
     >
       {children}

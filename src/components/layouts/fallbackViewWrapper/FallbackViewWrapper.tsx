@@ -21,15 +21,15 @@ export const FallbackViewWrapper = ({
         loop
       />
 
-      <Column classname="mb-15 gap-4" alignItems="center">
+      <Column className="mb-15 gap-4" alignItems="center">
         {!!title && (
-          <Text classname="text-center" size="h4">
+          <Text className="text-center" size="h4">
             {title}
           </Text>
         )}
 
         {!!subtitle && (
-          <Text classname="text-center text-steel!" size="h6">
+          <Text className="text-center text-steel!" size="h6">
             {subtitle}
           </Text>
         )}
@@ -40,7 +40,7 @@ export const FallbackViewWrapper = ({
         color="primary"
         onPress={buttonProps.onPress}
       >
-        <Text classname="text-white" size="large">
+        <Text className="text-white" size="large">
           {buttonProps.title}
         </Text>
       </Button>
