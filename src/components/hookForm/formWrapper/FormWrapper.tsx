@@ -24,6 +24,7 @@ export const FormWrapper = <T extends FieldValues>({
             isLoading={isInProgress}
             isDisabled={isSubmitDisabled}
             onPress={() => form.handleSubmit(buttonProps.onSubmit)}
+            {...buttonProps}
           >
             <Text>{buttonProps.title}</Text>
           </Button>
