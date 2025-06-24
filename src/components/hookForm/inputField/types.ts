@@ -5,7 +5,6 @@ export type InputFieldProps = { name: string } & Omit<
   | 'ref'
   | 'name'
   | 'value'
-  | 'defaultValue'
   | 'errorMessage'
   | 'isInvalid'
   | 'isReadOnly'

@@ -19,6 +19,7 @@ export const InputField = ({
   startContent,
   endContent,
   labelPlacement = 'inside',
+  defaultValue,
   isClearable = false,
   isRequired = false,
   isDisabled = false,
@@ -32,6 +33,7 @@ export const InputField = ({
     <Input
       ref={field.ref}
       value={field.value}
+      defaultValue={defaultValue}
       errorMessage={fieldState?.error?.message}
       isInvalid={fieldState?.invalid}
       classNames={classNames}
