@@ -5,11 +5,8 @@ export type CheckboxFieldProps = {
 } & Omit<
   CheckboxProps,
   | 'isSelected'
-  | 'value'
-  | 'defaultSelected'
   | 'isInvalid'
   | 'isReadOnly'
-  | 'isDisabled'
   | 'isIndeterminate'
   | 'onBlur'
   | 'onValueChange'

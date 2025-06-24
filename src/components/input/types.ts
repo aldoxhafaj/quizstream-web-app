@@ -3,6 +3,7 @@ import { type InputProps as HeroUIInputProps } from '@heroui/input';
 
 export type InputProps = Pick<
   HeroUIInputProps,
+  | 'ref'
   | 'classNames'
   | 'variant'
   | 'color'
