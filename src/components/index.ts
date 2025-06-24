@@ -1,4 +1,5 @@
 export { Button } from './button';
+export { Carousel } from './carousel';
 export { Checkbox } from './checkbox';
 export * from './contentLoaders';
 export * from './forms';
