@@ -3,13 +3,9 @@ import { useController, useFormContext } from 'react-hook-form';
 
 import type { InputFieldProps } from './types';
 
-/** This field is only available through formWrapper.
- *  Otherwise use input.
- */
-
 export const InputField = ({
-  classNames,
   name,
+  classNames,
   variant = 'flat',
   color = 'default',
   size = 'md',
@@ -25,22 +21,19 @@ export const InputField = ({
   labelPlacement = 'inside',
   isClearable = false,
   isRequired = false,
+  isDisabled = false,
   fullWidth = false,
   onClear,
 }: InputFieldProps) => {
   const { control } = useFormContext();
-  const {
-    field: { onBlur, onChange, value },
-    formState: { errors, isValid },
-  } = useController({ name, control });
+  const { field, fieldState } = useController({ name, control });
 
   return (
     <Input
-      value={value}
-      errorMessage={errors.root?.message}
-      isInvalid={!isValid}
-      onBlur={onBlur}
-      onChange={onChange}
+      ref={field.ref}
+      value={field.value}
+      errorMessage={fieldState?.error?.message}
+      isInvalid={fieldState?.invalid}
       classNames={classNames}
       variant={variant}
       color={color}
@@ -57,7 +50,10 @@ export const InputField = ({
       labelPlacement={labelPlacement}
       isClearable={isClearable}
       isRequired={isRequired}
+      isDisabled={isDisabled}
       fullWidth={fullWidth}
+      onBlur={field.onBlur}
+      onChange={field.onChange}
       onClear={onClear}
     />
   );

@@ -12,9 +12,8 @@ export const FormWrapper = <T extends FieldValues>({
   const { formState } = form;
 
   const isInProgress = formState.isSubmitting;
-  const isFormValid = formState.isValid && formState.isDirty;
+  const isFormValid = formState.isValid;
   const isSubmitDisabled = !isFormValid || isInProgress;
-
   return (
     <FormProvider {...form}>
       <form>

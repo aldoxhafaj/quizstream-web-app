@@ -13,5 +13,5 @@ type ButtonProps<T> = {
 export type FormWrapperProps<T extends FieldValues> = {
   children: ReactNode;
   form: UseFormReturn<T>;
-  buttonProps: ButtonProps<T>;
+  buttonProps?: ButtonProps<T>;
 };

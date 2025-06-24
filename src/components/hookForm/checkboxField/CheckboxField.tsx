@@ -3,10 +3,6 @@ import { useController, useFormContext } from 'react-hook-form';
 
 import type { CheckboxFieldProps } from './types';
 
-/** This field is only available through formWrapper.
- *  Otherwise use checkbox.
- */
-
 export const CheckboxField = ({
   children,
   name,
@@ -15,29 +11,31 @@ export const CheckboxField = ({
   size = 'md',
   color = 'primary',
   radius,
+  value,
+  defaultSelected = false,
+  isDisabled = false,
   lineThrough = false,
   isRequired = false,
 }: CheckboxFieldProps) => {
   const { control } = useFormContext();
-  const {
-    field: { value, onBlur, onChange },
-    formState: { isValid },
-  } = useController({ name, control });
+  const { field, fieldState } = useController({ name, control });
 
   return (
     <Checkbox
-      isSelected={value}
-      isInvalid={!isValid}
       classNames={classNames}
       icon={icon}
-      value={value}
       size={size}
       color={color}
       radius={radius}
+      value={value}
+      isSelected={field.value}
+      isInvalid={fieldState.invalid}
+      defaultSelected={defaultSelected}
+      isDisabled={isDisabled}
       lineThrough={lineThrough}
       isRequired={isRequired}
-      onBlur={onBlur}
-      onValueChange={onChange}
+      onBlur={field.onBlur}
+      onValueChange={field.onChange}
     >
       {children}
     </Checkbox>

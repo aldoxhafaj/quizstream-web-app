@@ -4,6 +4,7 @@ import { Input as HeroUIInput } from '@heroui/input';
 import type { InputProps } from './types';
 
 export const Input = ({
+  ref,
   classNames,
   variant = 'flat',
   color = 'default',
@@ -34,6 +35,7 @@ export const Input = ({
 }: InputProps) => {
   return (
     <HeroUIInput
+      ref={ref}
       classNames={classNames}
       variant={variant}
       color={color}
