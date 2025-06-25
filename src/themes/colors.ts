@@ -16,3 +16,5 @@ export enum LightColors {
   CHARCOAL = '#e1dfdf',
   DUSK = '#f3f0f0',
 }
+
+export type Color = typeof DarkColors | typeof LightColors;

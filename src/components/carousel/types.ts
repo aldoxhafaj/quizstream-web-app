@@ -1,9 +1,17 @@
 import type { Animation } from '@quizstream/themes/animations';
 
+type SlideAnimation = {
+  name: Animation;
+  size?: number;
+  height?: number;
+  width?: number;
+};
+
 export type Slide = {
+  id: number;
   title?: string;
   description?: string;
-  animation?: Animation;
+  animation?: SlideAnimation;
 };
 
 export type CarouselProps = {
@@ -25,5 +33,6 @@ export type SlideControlProps = {
 export type SlideIndicatorsProps = {
   page: number;
   totalPages: number;
+  disabled?: boolean;
   onPress: (slideIndex: number) => void;
 };

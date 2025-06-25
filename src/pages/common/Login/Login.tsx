@@ -1,14 +1,14 @@
-import { MainWrapper, Text } from '@quizstream/components/layouts';
-import { useIntl } from '@quizstream/contexts/i18nContext';
+import { Carousel } from '@quizstream/components/carousel';
+import { MainWrapper } from '@quizstream/components/layouts';
+
+import { useLoginCarousel } from './useLoginCarousel';
 
 export const Login = () => {
-  const { formatMessage } = useIntl();
+  const { slides } = useLoginCarousel();
 
   return (
-    <MainWrapper>
-      <Text>
-        {formatMessage({ id: 'login.title', defaultMessage: 'Hello world!' })}
-      </Text>
+    <MainWrapper alignItems="center" justifyContent="center">
+      <Carousel slides={slides} />
     </MainWrapper>
   );
 };
