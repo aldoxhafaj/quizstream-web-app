@@ -7,11 +7,12 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 .light {
-  --color-background: #eeedf4;
+  --color-background: #f5f5f5;
   --color-base: black;
   --color-steel: #757575;
   --color-charcoal: #e1dfdf;
   --color-dusk: #f3f0f0;
+  --color-cloud: #aeafb0;
 }
 
 .dark {
@@ -20,6 +21,7 @@
   --color-steel: white;
   --color-charcoal: #23262f;
   --color-dusk: #35383f;
+  --color-cloud: #2a323f;
 }
 
 @theme {
@@ -30,6 +32,7 @@
   --color-steel: var(--color-steel);
   --color-charcoal: var(--color-charcoal);
   --color-dusk: var(--color-dusk);
+  --color-cloud: var(--color-cloud);
 
   /* Fonts */
   --font-*: initial;

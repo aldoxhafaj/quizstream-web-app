@@ -15,6 +15,7 @@ export const LottieView = ({
   autoplay = true,
   loop = false,
   enableLoading = false,
+  enableAnimation = true,
 }: LottieViewProps) => {
   const [isLoading, setIsLoading] = useState(enableLoading);
 
@@ -27,13 +28,15 @@ export const LottieView = ({
           </div>
         )}
 
-        <Lottie
-          animationData={Animations[name]}
-          autoPlay={autoplay}
-          loop={loop}
-          onDOMLoaded={() => setIsLoading(false)}
-          style={{ width, height }}
-        />
+        {enableAnimation && (
+          <Lottie
+            animationData={Animations[name]}
+            autoPlay={autoplay}
+            loop={loop}
+            onDOMLoaded={() => setIsLoading(false)}
+            style={{ width, height }}
+          />
+        )}
       </Container>
     </Container>
   );

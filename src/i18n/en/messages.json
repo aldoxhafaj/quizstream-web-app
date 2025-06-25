@@ -1,11 +1,24 @@
 {
   "adminDashboard.title": "Welcome to admin dashboard!",
-  "login.title": "Hello world!",
   "notFound.title": "Whoops! Page not found.",
   "userDashboard.title": "Welcome to user dashboard!",
   "errorFallback.button.label": "Try again!",
   "errorFallback.subtitle": "We're sorry, but an unexpected error occurred. Our team is working to resolve the issue. Please try refreshing the page or check back later.",
   "errorFallback.title": "Whoops! Something, went wrong!",
   "notFound.button.label": "Back to home",
-  "notFound.subtitle": "We couldn't find the page you are looking for.It might have been moved or doesn't exist anymore."
+  "notFound.subtitle": "We couldn't find the page you are looking for.It might have been moved or doesn't exist anymore.",
+  "login.carousel.firstSlideDescription": "Challenge your mind with questions that will push your knowledge to the edge.",
+  "login.carousel.firstSlideTitle": "Ready to test your limits?",
+  "login.carousel.forthSlideDescription": "Join a competitive quiz experience and see if you have what it takes to be a champion.",
+  "login.carousel.forthSlideTitle": "Can You Beat the Best?",
+  "login.carousel.secondSlideDescription": "Time is ticking—prove you're the quickest quiz master and climb the leaderboard.",
+  "login.carousel.secondSlideTitle": "Think Fast, Score Big!",
+  "login.carousel.thirdSlideDescription": "Explore fun, challenging quizzes that sharpen your skills and ignite curiosity.",
+  "login.carousel.thirdSlideTitle": "Unlock Your Brain's Potential!",
+  "schema.agreeOnTerms.checkbox": "You must accept the terms and conditions!",
+  "schema.invalid.email": "Invalid email!",
+  "schema.minLength.password": "Password must be at least {minLength} characters!",
+  "schema.oneUppercaseLetter.password": "Password must contain at least one uppercase letter!",
+  "schema.required.email": "Email is required!",
+  "schema.required.password": "Password is required!"
 }

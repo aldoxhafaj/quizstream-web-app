@@ -4,6 +4,7 @@ export { Checkbox } from './checkbox';
 export * from './contentLoaders';
 export * from './forms';
 export * from './hookForm';
+export { IconSvg } from './iconSvg';
 export { Input } from './input';
 export * from './layouts';
 export { LottieView } from './lottieView';
