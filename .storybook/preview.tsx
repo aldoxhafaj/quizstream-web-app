@@ -11,6 +11,23 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    (Story, { parameters }) => {
+      const { enableTheme } = parameters;
+
+      switch (true) {
+        case enableTheme:
+          return (
+            <div className="light">
+              <Story />
+            </div>
+          );
+
+        default:
+          return <Story />;
+      }
+    },
+  ],
 };
 
 export default preview;
