@@ -1,5 +1,4 @@
 import { Button } from '@quizstream/components/button';
-import { Text } from '@quizstream/components/layouts/text';
 import { type FieldValues, FormProvider } from 'react-hook-form';
 
 import type { FormWrapperProps } from './types';
@@ -26,7 +25,7 @@ export const FormWrapper = <T extends FieldValues>({
             onClick={form.handleSubmit(buttonProps.onSubmit)}
             {...buttonProps}
           >
-            <Text>{buttonProps.title}</Text>
+            {buttonProps.title}
           </Button>
         )}
       </form>
