@@ -38,7 +38,7 @@ export const FallbackViewWrapper = ({
       <Button
         className="px-40 max-md:px-30 max-sm:px-24"
         color="primary"
-        onPress={buttonProps.onPress}
+        onClick={buttonProps.onClick}
       >
         <Text className="text-white" size="large">
           {buttonProps.title}

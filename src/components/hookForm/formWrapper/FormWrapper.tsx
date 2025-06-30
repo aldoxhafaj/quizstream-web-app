@@ -6,24 +6,24 @@ import type { FormWrapperProps } from './types';
 
 export const FormWrapper = <T extends FieldValues>({
   children,
+  className,
   form,
   buttonProps,
 }: FormWrapperProps<T>) => {
   const { formState } = form;
 
   const isInProgress = formState.isSubmitting;
-  const isFormValid = formState.isValid;
-  const isSubmitDisabled = !isFormValid || isInProgress;
+  const isSubmitDisabled = isInProgress;
   return (
     <FormProvider {...form}>
-      <form>
+      <form className={`flex size-full flex-col gap-4 ${className}`}>
         {children}
 
         {!!buttonProps && (
           <Button
             isLoading={isInProgress}
             isDisabled={isSubmitDisabled}
-            onPress={() => form.handleSubmit(buttonProps.onSubmit)}
+            onClick={form.handleSubmit(buttonProps.onSubmit)}
             {...buttonProps}
           >
             <Text>{buttonProps.title}</Text>

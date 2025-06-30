@@ -27,7 +27,7 @@ export const ErrorFallback = ({ resetErrorBoundary }: FallbackProps) => {
           id: 'errorFallback.button.label',
           defaultMessage: 'Try again!',
         }),
-        onPress: resetErrorBoundary,
+        onClick: resetErrorBoundary,
       }}
     />
   );

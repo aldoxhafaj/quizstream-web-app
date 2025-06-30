@@ -46,7 +46,7 @@ const meta = {
     },
   },
 
-  args: { onPress: fn() },
+  args: { onClick: fn() },
 } satisfies Meta<typeof Button>;
 
 export default meta;

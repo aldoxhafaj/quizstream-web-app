@@ -5,7 +5,7 @@ import type { ColumnProps } from './types';
 export const Column = ({
   children,
   className,
-  alignItems = 'start',
+  alignItems = 'stretch',
   justifyContent = 'start',
   onClick,
 }: ColumnProps) => {

@@ -6,7 +6,7 @@ import type { SlideControlProps } from './types';
 
 export const SlideControl = ({
   position = 'left',
-  onPress,
+  onClick,
 }: SlideControlProps) => {
   const isLeftPosition = position === 'left';
 
@@ -15,7 +15,7 @@ export const SlideControl = ({
       className={`absolute ${isLeftPosition ? 'left-0' : 'right-0'} top-1/2 z-10 -translate-y-1/2 bg-cloud`}
       radius="full"
       isIconOnly
-      onPress={onPress}
+      onClick={onClick}
     >
       <IconSvg
         className="fill-white"

@@ -6,7 +6,7 @@ export const SlideIndicators = ({
   page,
   totalPages,
   disabled = false,
-  onPress,
+  onClick,
 }: SlideIndicatorsProps) => {
   return (
     <Row className="absolute bottom-0 left-1/2 -translate-x-1/2 space-x-2">
@@ -18,7 +18,7 @@ export const SlideIndicators = ({
           <div
             key={slideIndex}
             className={`h-1 min-w-10 ${!disabled && 'cursor-pointer'} select-none ${indicatorStyle} rounded-sm transition-all duration-300`}
-            onClick={() => !disabled && onPress(slideIndex)}
+            onClick={() => !disabled && onClick(slideIndex)}
           />
         );
       })}

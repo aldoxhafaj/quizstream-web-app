@@ -11,7 +11,7 @@ export const NotFound = () => {
   const { formatMessage } = useIntl();
   const navigate = useNavigate();
 
-  const onBackPress = () => {
+  const onBackClick = () => {
     switch (LOGGED_USER_ROLE) {
       case UserRole.ADMIN:
         return navigate('/admin/dashboard');
@@ -39,7 +39,7 @@ export const NotFound = () => {
           id: 'notFound.button.label',
           defaultMessage: 'Back to home',
         }),
-        onPress: onBackPress,
+        onClick: onBackClick,
       }}
     />
   );
