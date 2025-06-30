@@ -18,5 +18,5 @@ export type ButtonProps = Pick<
   | 'isLoading'
   | 'disableRipple'
   | 'fullWidth'
-  | 'onPress'
+  | 'onClick'
 >;

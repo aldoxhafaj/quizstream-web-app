@@ -5,7 +5,7 @@ import type { RowProps } from './types';
 export const Row = ({
   children,
   className,
-  alignItems = 'start',
+  alignItems = 'stretch',
   justifyContent = 'start',
   flexWrap = false,
   onClick,

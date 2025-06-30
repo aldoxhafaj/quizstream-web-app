@@ -15,7 +15,7 @@ export type Slide = {
 };
 
 export type CarouselProps = {
-  onSlidePress?: () => void;
+  onSlideClick?: () => void;
 } & UseCarouselProps;
 
 export type UseCarouselProps = {
@@ -27,12 +27,12 @@ export type UseCarouselProps = {
 
 export type SlideControlProps = {
   position?: 'left' | 'right';
-  onPress: () => void;
+  onClick: () => void;
 };
 
 export type SlideIndicatorsProps = {
   page: number;
   totalPages: number;
   disabled?: boolean;
-  onPress: (slideIndex: number) => void;
+  onClick: (slideIndex: number) => void;
 };

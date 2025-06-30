@@ -38,7 +38,7 @@ const meta = {
     },
   },
 
-  args: { onSlidePress: fn() },
+  args: { onSlideClick: fn() },
 } satisfies Meta<typeof Carousel>;
 
 export default meta;

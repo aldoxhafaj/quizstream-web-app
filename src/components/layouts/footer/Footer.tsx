@@ -11,7 +11,7 @@ export const Footer = ({
   const isClickable = !!onClick;
   return (
     <div
-      className={`flex grow justify-end ${FlexAlign[alignitems]} ${isClickable && 'cursor-pointer'} ${className}`}
+      className={`flex grow justify-center ${FlexAlign[alignitems]} ${isClickable && 'cursor-pointer'} ${className}`}
       onClick={onClick}
     >
       {children}

@@ -22,7 +22,7 @@ export const useCarousel = ({
     setSlidePage((prevPage) => Math.max(prevPage - 1, 0));
   };
 
-  const onSlideIndicatorPress = (slideIndex: number) => {
+  const onSlideIndicatorClick = (slideIndex: number) => {
     setSlidePage(slideIndex);
   };
 
@@ -39,6 +39,6 @@ export const useCarousel = ({
     isCarouselInteractive: !autoplay && !loop,
     onNextSlide,
     onPreviousSlide,
-    onSlideIndicatorPress,
+    onSlideIndicatorClick,
   };
 };

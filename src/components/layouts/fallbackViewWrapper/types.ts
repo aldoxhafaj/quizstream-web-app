@@ -2,7 +2,7 @@ import type { Animation } from '@quizstream/themes/animations';
 
 type ButtonProps = {
   title: string;
-  onPress: () => void;
+  onClick: () => void;
 };
 
 export type FallbackViewWrapperProps = {

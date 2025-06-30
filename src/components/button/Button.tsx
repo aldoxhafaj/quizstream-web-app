@@ -19,7 +19,7 @@ export const Button = ({
   isLoading = false,
   disableRipple = false,
   fullWidth = false,
-  onPress,
+  onClick,
 }: ButtonProps) => {
   return (
     <HeroUIButton
@@ -37,7 +37,7 @@ export const Button = ({
       isLoading={isLoading}
       disableRipple={disableRipple}
       fullWidth={fullWidth}
-      onPress={onPress}
+      onClick={onClick}
     >
       {children}
     </HeroUIButton>

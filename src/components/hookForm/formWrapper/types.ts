@@ -11,11 +11,12 @@ type ButtonProps<T> = {
   onSubmit: SubmitHandler<T>;
 } & Omit<
   ButtonComponentProps,
-  'children' | 'isLoading' | 'isDisabled' | 'onPress'
+  'children' | 'isLoading' | 'isDisabled' | 'onClick'
 >;
 
 export type FormWrapperProps<T extends FieldValues> = {
   children: ReactNode;
+  className?: string;
   form: UseFormReturn<T>;
   buttonProps?: ButtonProps<T>;
 };

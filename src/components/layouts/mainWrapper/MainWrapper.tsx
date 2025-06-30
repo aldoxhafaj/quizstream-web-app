@@ -9,7 +9,7 @@ export const MainWrapper = ({
 }: MainWrapperProps) => {
   return (
     <Column
-      className="min-h-dvh w-dvw bg-background p-3xl max-md:p-xl"
+      className="min-h-dvh w-dvw bg-background"
       alignItems={alignItems}
       justifyContent={justifyContent}
     >

@@ -12,14 +12,14 @@ export const Carousel = ({
   duration = CAROUSEL_SLIDE_AUTOPLAY_DURATION,
   autoplay = true,
   loop = false,
-  onSlidePress,
+  onSlideClick,
 }: CarouselProps) => {
   const {
     slidePage,
     isCarouselInteractive,
     onNextSlide,
     onPreviousSlide,
-    onSlideIndicatorPress,
+    onSlideIndicatorClick,
   } = useCarousel({
     slides,
     duration,
@@ -38,7 +38,7 @@ export const Carousel = ({
             key={id}
             className="mb-4 w-full shrink-0"
             alignItems="center"
-            onClick={onSlidePress}
+            onClick={onSlideClick}
           >
             {!!title && (
               <Text className="text-center" size="h6">
@@ -66,8 +66,8 @@ export const Carousel = ({
 
       {isCarouselInteractive && (
         <>
-          <SlideControl onPress={onPreviousSlide} />
-          <SlideControl position="right" onPress={onNextSlide} />
+          <SlideControl onClick={onPreviousSlide} />
+          <SlideControl position="right" onClick={onNextSlide} />
         </>
       )}
 
@@ -75,7 +75,7 @@ export const Carousel = ({
         page={slidePage}
         totalPages={slides.length}
         disabled={!isCarouselInteractive}
-        onPress={onSlideIndicatorPress}
+        onClick={onSlideIndicatorClick}
       />
     </Container>
   );
