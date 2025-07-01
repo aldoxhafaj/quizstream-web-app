@@ -13,7 +13,11 @@ export const FallbackViewWrapper = ({
   buttonProps,
 }: FallbackViewWrapperProps) => {
   return (
-    <MainWrapper alignItems="center" justifyContent="center">
+    <MainWrapper
+      className="p-3xl max-md:p-xl"
+      alignItems="center"
+      justifyContent="center"
+    >
       <LottieView
         name={animation}
         width={animationWidth}
