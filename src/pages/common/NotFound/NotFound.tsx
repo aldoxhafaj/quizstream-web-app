@@ -3,9 +3,9 @@ import { useIntl } from '@quizstream/contexts/i18nContext';
 import { Animation } from '@quizstream/themes/animations';
 import { UserRole } from '@quizstream/types/user';
 import { horizontalScale } from '@quizstream/utils/calculations';
+import { LOGGED_USER_ROLE } from '@quizstream/utils/constants';
 import { useNavigate } from 'react-router';
 
-const LOGGED_USER_ROLE = UserRole.ADMIN;
 const ANIMATION_SIZE = horizontalScale(450);
 export const NotFound = () => {
   const { formatMessage } = useIntl();

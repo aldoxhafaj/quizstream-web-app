@@ -14,20 +14,20 @@ export const useLoginSchema = () => {
       .matches(
         EMAIL_REGEX,
         formatMessage({
-          id: 'schema.invalid.email',
+          id: 'loginSchema.invalid.email',
           defaultMessage: 'Invalid email!',
         }),
       )
       .required(
         formatMessage({
-          id: 'schema.required.email',
+          id: 'loginSchema.required.email',
           defaultMessage: 'Email is required!',
         }),
       ),
     password: string()
       .required(
         formatMessage({
-          id: 'schema.required.password',
+          id: 'loginSchema.required.password',
           defaultMessage: 'Password is required!',
         }),
       )
@@ -35,7 +35,7 @@ export const useLoginSchema = () => {
         PASSWORD_MIN_LENGTH,
         formatMessage(
           {
-            id: 'schema.minLength.password',
+            id: 'loginSchema.minLength.password',
             defaultMessage: 'Password must be at least {minLength} characters!',
           },
           {
@@ -46,7 +46,7 @@ export const useLoginSchema = () => {
       .matches(
         ONE_UPPERCASE_LETTER_REGEX,
         formatMessage({
-          id: 'schema.oneUppercaseLetter.password',
+          id: 'loginSchema.oneUppercaseLetter.password',
           defaultMessage:
             'Password must contain at least one uppercase letter!',
         }),
@@ -55,13 +55,13 @@ export const useLoginSchema = () => {
       .oneOf(
         [true],
         formatMessage({
-          id: 'schema.agreeOnTerms.checkbox',
+          id: 'common.agreeOnTermsAndConditions.error',
           defaultMessage: 'You must accept the terms and conditions!',
         }),
       )
       .required(
         formatMessage({
-          id: 'schema.agreeOnTerms.checkbox',
+          id: 'common.agreeOnTermsAndConditions.error',
           defaultMessage: 'You must accept the terms and conditions!',
         }),
       ),
