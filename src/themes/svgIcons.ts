@@ -1,8 +1,10 @@
-import { chevronLeft, chevronRight } from '@quizstream/assets/svg';
+import { chevronLeft, chevronRight, moon, sun } from '@quizstream/assets/svg';
 
 export enum IconNameSVG {
   CHEVRON_RIGHT = 'chevronRight',
   CHEVRON_LEFT = 'chevronLeft',
+  MOON = 'moon',
+  SUN = 'sun',
 }
 
 export const SvgIcons: Record<
@@ -11,4 +13,6 @@ export const SvgIcons: Record<
 > = {
   chevronLeft,
   chevronRight,
+  moon,
+  sun,
 };

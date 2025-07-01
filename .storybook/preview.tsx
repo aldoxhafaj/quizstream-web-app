@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/react-vite';
 import '../index.css';
+import { ThemeProvider } from '../src/contexts/themeContext';
 
 const preview: Preview = {
   parameters: {
@@ -18,9 +19,9 @@ const preview: Preview = {
       switch (true) {
         case enableTheme:
           return (
-            <div className="light">
+            <ThemeProvider>
               <Story />
-            </div>
+            </ThemeProvider>
           );
 
         default:

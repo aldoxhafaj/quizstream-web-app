@@ -5,6 +5,7 @@ import type {
 import type { ReactNode } from 'react';
 
 export type MainWrapperProps = {
+  className?: string;
   children: ReactNode;
   alignItems?: AlignItems;
   justifyContent?: JustifyContent;

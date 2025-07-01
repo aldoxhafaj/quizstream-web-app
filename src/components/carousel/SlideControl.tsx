@@ -1,5 +1,4 @@
-import { Button } from '@quizstream/components/button';
-import { IconSvg } from '@quizstream/components/iconSvg';
+import { IconButton } from '@quizstream/components/iconButton';
 import { IconNameSVG } from '@quizstream/themes/svgIcons';
 
 import type { SlideControlProps } from './types';
@@ -9,20 +8,18 @@ export const SlideControl = ({
   onClick,
 }: SlideControlProps) => {
   const isLeftPosition = position === 'left';
+  const icon = isLeftPosition
+    ? IconNameSVG.CHEVRON_LEFT
+    : IconNameSVG.CHEVRON_RIGHT;
 
   return (
-    <Button
+    <IconButton
       className={`absolute ${isLeftPosition ? 'left-0' : 'right-0'} top-1/2 z-10 -translate-y-1/2 bg-cloud`}
+      size="md"
       radius="full"
-      isIconOnly
+      icon={icon}
+      iconClassName="fill-white!"
       onClick={onClick}
-    >
-      <IconSvg
-        className="fill-white"
-        name={
-          isLeftPosition ? IconNameSVG.CHEVRON_LEFT : IconNameSVG.CHEVRON_RIGHT
-        }
-      />
-    </Button>
+    />
   );
 };
