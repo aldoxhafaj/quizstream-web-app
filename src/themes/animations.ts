@@ -1,5 +1,6 @@
 import {
   brainWave,
+  checkList,
   questionMark,
   questionMarkTriplon,
   somethingWentWrong,
@@ -10,6 +11,7 @@ export enum Animation {
   QUESTION_MARK = 'questionMark',
   QUESTION_MARK_TRIPLON = 'questionMarkTriplon',
   BRAIN_WAVE = 'brainWave',
+  CHECK_LIST = 'checkList',
 }
 
 export const Animations: Record<Animation, unknown> = {
@@ -17,4 +19,5 @@ export const Animations: Record<Animation, unknown> = {
   questionMark,
   questionMarkTriplon,
   somethingWentWrong,
+  checkList,
 };
