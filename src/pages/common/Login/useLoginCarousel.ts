@@ -60,7 +60,7 @@ export const useLoginCarousel = () => {
         defaultMessage:
           'Join a competitive quiz experience and see if you have what it takes to be a champion.',
       }),
-      animation: { name: Animation.BRAIN_WAVE, size: ANIMATION_SIZE },
+      animation: { name: Animation.CHECK_LIST, size: ANIMATION_SIZE },
     },
   ];
 
