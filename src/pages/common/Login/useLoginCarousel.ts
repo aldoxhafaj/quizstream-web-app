@@ -3,7 +3,7 @@ import { useIntl } from '@quizstream/contexts/i18nContext';
 import { Animation } from '@quizstream/themes/animations';
 import { horizontalScale } from '@quizstream/utils/calculations';
 
-const ANIMATION_SIZE = horizontalScale(350);
+const ANIMATION_SIZE = horizontalScale(320);
 export const useLoginCarousel = () => {
   const { formatMessage } = useIntl();
 
