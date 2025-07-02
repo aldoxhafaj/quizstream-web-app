@@ -9,6 +9,8 @@ export { IconSvg } from './iconSvg';
 export { Input } from './input';
 export * from './layouts';
 export { LottieView } from './lottieView';
+export { ProfileWidget } from './profileWidget';
 export { SecureRoute } from './secureRoute';
+export * from './sidebar';
 export { TextPairAction } from './textPairAction';
 export { ThemeToggler } from './themeToggler';

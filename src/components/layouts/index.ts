@@ -1,3 +1,4 @@
+export { CardView } from './cardView';
 export { Column } from './column';
 export { Container } from './container';
 export { FallbackViewWrapper } from './fallbackViewWrapper';
