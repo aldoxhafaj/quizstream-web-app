@@ -227,7 +227,7 @@ export default tseslint.config(
         'error',
         {
           // The object properties to check for untranslated literal strings
-          include: ['label', 'title', 'description'],
+          include: ['label', 'title', 'description', 'name', 'subtitle'],
         },
       ],
       'formatjs/no-multiple-whitespaces': 'error',

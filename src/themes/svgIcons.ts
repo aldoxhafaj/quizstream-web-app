@@ -1,10 +1,31 @@
-import { chevronLeft, chevronRight, moon, sun } from '@quizstream/assets/svg';
+import {
+  assignment,
+  bubbles,
+  chevronLeft,
+  chevronRight,
+  dashboard,
+  exit,
+  moon,
+  roundedPlay,
+  settings,
+  sun,
+  team,
+  user,
+} from '@quizstream/assets/svg';
 
 export enum IconNameSVG {
   CHEVRON_RIGHT = 'chevronRight',
   CHEVRON_LEFT = 'chevronLeft',
   MOON = 'moon',
   SUN = 'sun',
+  SETTINGS = 'settings',
+  BUBBLES = 'bubbles',
+  DASHBOARD = 'dashboard',
+  ROUNDED_PLAY = 'roundedPlay',
+  TEAM = 'team',
+  USER = 'user',
+  ASSIGNMENT = 'assignment',
+  EXIT = 'exit',
 }
 
 export const SvgIcons: Record<
@@ -15,4 +36,12 @@ export const SvgIcons: Record<
   chevronRight,
   moon,
   sun,
+  settings,
+  bubbles,
+  dashboard,
+  roundedPlay,
+  team,
+  user,
+  assignment,
+  exit,
 };

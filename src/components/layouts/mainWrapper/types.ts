@@ -9,4 +9,5 @@ export type MainWrapperProps = {
   children: ReactNode;
   alignItems?: AlignItems;
   justifyContent?: JustifyContent;
+  hasSidebar?: boolean;
 };

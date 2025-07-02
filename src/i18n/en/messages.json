@@ -29,5 +29,14 @@
   "loginSchema.oneUppercaseLetter.password": "Password must contain at least one uppercase letter!",
   "loginSchema.required.email": "Email is required!",
   "loginSchema.required.password": "Password is required!",
-  "common.agreeOnTermsAndConditions.error": "You must accept the terms and conditions!"
+  "common.agreeOnTermsAndConditions.error": "You must accept the terms and conditions!",
+  "adminSidebar.menu.dashboard": "Dashboard",
+  "adminSidebar.menu.livestream": "Livestream",
+  "adminSidebar.menu.logout": "Logout",
+  "adminSidebar.menu.quizzes": "Quizzes",
+  "adminSidebar.menu.settings": "Settings",
+  "adminSidebar.menu.teams": "Teams",
+  "adminSidebar.menu.users": "Users",
+  "adminSidebar.profileWidget.title": "Welcome back, George!",
+  "adminSidebar.title": "Quizstream"
 }
