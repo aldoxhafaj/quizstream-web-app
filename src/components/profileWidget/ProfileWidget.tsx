@@ -1,18 +1,29 @@
+import { Avatar } from '@quizstream/components/avatar';
 import { CardView, Row, Text } from '@quizstream/components/layouts';
-import { ThemeToggler } from '@quizstream/components/themeToggler';
 
 import type { ProfileWidgetProps } from './types';
 
-export const ProfileWidget = ({ subtitle, title }: ProfileWidgetProps) => {
+export const ProfileWidget = ({
+  className,
+  title,
+  subtitle,
+  name = '',
+  image = '',
+  rightContent,
+  avatarSize = 'xs',
+  avatarRadius = 'sm',
+}: ProfileWidgetProps) => {
   return (
-    <CardView className="w-full">
+    <CardView className={`w-full ${className}`}>
       <Row alignItems="center" justifyContent="between">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SRRmhH4X5N2e4QalcoxVbzYsD44C-sQv-w&s"
-          style={{ width: 40, height: 40 }}
+        <Avatar
+          image={image}
+          name={name}
+          size={avatarSize}
+          radius={avatarRadius}
         />
 
-        <ThemeToggler />
+        {rightContent}
       </Row>
 
       {!!subtitle && (

@@ -6,7 +6,7 @@ export const Dashboard = () => {
 
   return (
     <MainWrapper className="px-4 py-6" hasSidebar>
-      <CardView className="w-full">
+      <CardView className="size-full">
         <Text>
           {formatMessage({
             id: 'adminDashboard.title',

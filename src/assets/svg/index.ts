@@ -5,6 +5,7 @@ import chevronRight from './chevron-right.svg?react';
 import dashboard from './dashboard.svg?react';
 import exit from './exit.svg?react';
 import moon from './moon.svg?react';
+import noAvatar from './noAvatar.svg?react';
 import roundedPlay from './rounded-play.svg?react';
 import settings from './settings.svg?react';
 import sun from './sun.svg?react';
@@ -19,6 +20,7 @@ export {
   dashboard,
   exit,
   moon,
+  noAvatar,
   roundedPlay,
   settings,
   sun,
