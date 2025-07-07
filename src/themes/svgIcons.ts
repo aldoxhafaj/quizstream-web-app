@@ -6,6 +6,7 @@ import {
   dashboard,
   exit,
   moon,
+  noAvatar,
   roundedPlay,
   settings,
   sun,
@@ -26,6 +27,7 @@ export enum IconNameSVG {
   USER = 'user',
   ASSIGNMENT = 'assignment',
   EXIT = 'exit',
+  NO_AVATAR = 'noAvatar',
 }
 
 export const SvgIcons: Record<
@@ -44,4 +46,5 @@ export const SvgIcons: Record<
   user,
   assignment,
   exit,
+  noAvatar,
 };

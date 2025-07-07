@@ -2,11 +2,14 @@ import { IconButton } from '@quizstream/components/iconButton';
 import { IconSvg } from '@quizstream/components/iconSvg';
 import { CardView, Column, Row, Text } from '@quizstream/components/layouts';
 import { ProfileWidget } from '@quizstream/components/profileWidget';
+import { ThemeToggler } from '@quizstream/components/themeToggler';
 import { useIntl } from '@quizstream/contexts/i18nContext';
 import { IconNameSVG } from '@quizstream/themes/svgIcons';
 
+import { AdminSidebarMenus } from './AdminSidebarMenus';
 import { useAdminSidebar } from './useAdminSidebar';
 
+const USERNAME = 'George';
 export const AdminSidebar = () => {
   const { formatMessage } = useIntl();
   const { sidebarMenus, onSettingsClick, onLogoutClick } = useAdminSidebar();
@@ -25,25 +28,19 @@ export const AdminSidebar = () => {
         </Row>
 
         <ProfileWidget
+          name={USERNAME}
+          title={formatMessage(
+            {
+              id: 'adminSidebar.profileWidget.title',
+              defaultMessage: 'Welcome back, {name}!',
+            },
+            { name: USERNAME },
+          )}
           subtitle="Monday, March 24"
-          title={formatMessage({
-            id: 'adminSidebar.profileWidget.title',
-            defaultMessage: 'Welcome back, George!',
-          })}
+          rightContent={<ThemeToggler />}
         />
 
-        <CardView className="flex w-full flex-col gap-2">
-          {sidebarMenus.map((menu) => (
-            <Row
-              className="w-full gap-2 rounded-sm px-1 py-2 hover:scale-x-105 hover:bg-charcoal active:opacity-85"
-              alignItems="center"
-              onClick={menu.onClick}
-            >
-              <IconSvg name={menu.lefticon} />
-              <Text size="body">{menu.title}</Text>
-            </Row>
-          ))}
-        </CardView>
+        <AdminSidebarMenus data={sidebarMenus} />
 
         <CardView
           className="flex w-full items-center gap-2"

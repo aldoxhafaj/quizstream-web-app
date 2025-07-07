@@ -167,6 +167,7 @@ export default tseslint.config(
           props: 'never',
         },
       ],
+      'react/jsx-key': 'error',
       'react/no-unstable-nested-components': [
         'error',
         {

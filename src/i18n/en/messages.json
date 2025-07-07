@@ -37,6 +37,6 @@
   "adminSidebar.menu.settings": "Settings",
   "adminSidebar.menu.teams": "Teams",
   "adminSidebar.menu.users": "Users",
-  "adminSidebar.profileWidget.title": "Welcome back, George!",
+  "adminSidebar.profileWidget.title": "Welcome back, {name}!",
   "adminSidebar.title": "Quizstream"
 }

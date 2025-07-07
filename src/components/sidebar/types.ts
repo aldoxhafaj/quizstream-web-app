@@ -6,3 +6,7 @@ export type SidebarMenu = {
   lefticon: IconNameSVG;
   onClick: () => void;
 };
+
+export type AdminSidebarMenusProps = {
+  data: SidebarMenu[];
+};
